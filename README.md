@@ -1,0 +1,4 @@
+If you are trying to create a new file for storing information, first create a new object using the constructor FlexFile("Name","Attribute 1","Attribute 2","Etc"); You can then set the attributes to be whatever you
+want using FlexFile.setProperty("Attribute 1",35); You can use any data type for this, as long as it has a .valueOf(String) or has a wrapper class with that function. To create the file, you should use the method
+FlexFile.saveFile(); which will create the file if it doesn't exist already or update it if it does. You can then later refer to the file with the constructor FlexFile("Name"); which will check for an existing file
+with that name, and retrieve the data using FlexFile.getProperty("Attribute",Object.class); Unfortunately you do have to define the class when using getProperty like this.
